@@ -10,19 +10,19 @@ const selectionSorting = () => {
   logs("initial array " + arr.join(", "));
 
   for (let loop = 0; loop < arr.length - 1; loop++) {
-    logs("");
-
-    logs(`Loop #${loop + 1}. Elements in loop ${arr.length - loop}`);
+    logs("<br>");
 
     let currentElementToCompare = arr[loop];
     let smallestElement = currentElementToCompare;
     let smallestElementIndex = 0;
 
+    logs(`<h3>Loop #${loop + 1}. Elements in loop ${arr.length - loop}</h3>`);
+
     logs(
-      `Take element with value ${currentElementToCompare} and compare with others.`
+      `Take element with value <b>${currentElementToCompare}</b> and compare with others.`
     );
 
-    for (let index = loop; index < arr.length; index++) {
+    for (let index = loop + 1; index < arr.length; index++) {
       iterations++;
 
       if (smallestElement > arr[index]) {
@@ -41,6 +41,6 @@ const selectionSorting = () => {
     logs("now array is " + arr.join(", "));
   }
 
-  logs("sorted array " + arr.join(", "));
-  logs(`Elements count: ${arr.length}. Iterations: ${iterations}`);
+  logs("<br><h3>Sorted array " + arr.join(", ") + "</h3>");
+  logs(`<h3>Elements count: ${arr.length}. Iterations: ${iterations}</h3>`);
 };

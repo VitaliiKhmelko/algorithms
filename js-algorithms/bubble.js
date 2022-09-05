@@ -10,7 +10,7 @@ const bubbleSorting = () => {
   logs("initial array " + arr.join(", "));
 
   for (let loop = 0; loop < arr.length; loop++) {
-    logs(`Loop #${loop + 1}`);
+    logs(`<br/><h3>Loop #${loop + 1}</h3>`);
     for (let index = 0; index < arr.length; index++) {
       iterations++;
 
