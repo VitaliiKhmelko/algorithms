@@ -7,10 +7,10 @@ const bubbleSorting = () => {
   const arr = [5, 3, 7, 6, 8, 1, 2];
   let iterations = 0;
 
-  console.log("initial array " + arr.join(", "));
+  logs("initial array " + arr.join(", "));
 
   for (let loop = 0; loop < arr.length; loop++) {
-    console.log(`Loop #${loop + 1}`);
+    logs(`Loop #${loop + 1}`);
     for (let index = 0; index < arr.length; index++) {
       iterations++;
 
@@ -18,16 +18,16 @@ const bubbleSorting = () => {
       const elementBottom = arr[index + 1];
 
       if (elementBottom < elementAbove) {
-        console.log(`swapping ${elementAbove} and ${elementBottom}`);
+        logs(`swapping ${elementAbove} and ${elementBottom}`);
         arr[index] = elementBottom;
         arr[index + 1] = elementAbove;
       } else {
-        console.log(`don't swap ${elementAbove} and ${elementBottom}`);
+        logs(`don't swap ${elementAbove} and ${elementBottom}`);
       }
     }
-    console.log(arr.join(", "));
+    logs(arr.join(", "));
   }
 
-  console.log("sorted array " + arr.join(", "));
-  console.log(`Elements count: ${arr.length}. Iterations: ${iterations}`);
+  logs("sorted array " + arr.join(", "));
+  logs(`Elements count: ${arr.length}. Iterations: ${iterations}`);
 };

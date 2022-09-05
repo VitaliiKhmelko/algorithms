@@ -7,18 +7,18 @@ const selectionSorting = () => {
 
   let iterations = 0;
 
-  console.log("initial array " + arr.join(", "));
+  logs("initial array " + arr.join(", "));
 
   for (let loop = 0; loop < arr.length - 1; loop++) {
-    console.log("");
+    logs("");
 
-    console.log(`Loop #${loop + 1}. Elements in loop ${arr.length - loop}`);
+    logs(`Loop #${loop + 1}. Elements in loop ${arr.length - loop}`);
 
     let currentElementToCompare = arr[loop];
     let smallestElement = currentElementToCompare;
     let smallestElementIndex = 0;
 
-    console.log(
+    logs(
       `Take element with value ${currentElementToCompare} and compare with others.`
     );
 
@@ -31,16 +31,16 @@ const selectionSorting = () => {
       }
     }
 
-    console.log(
+    logs(
       `Find the smallest element. Swap ${currentElementToCompare} (index: ${loop}) with ${arr[smallestElementIndex]} (index: ${smallestElementIndex}).`
     );
 
     arr[loop] = smallestElement;
     arr[smallestElementIndex] = currentElementToCompare;
 
-    console.log("now array is " + arr.join(", "));
+    logs("now array is " + arr.join(", "));
   }
 
-  console.log("sorted array " + arr.join(", "));
-  console.log(`Elements count: ${arr.length}. Iterations: ${iterations}`);
+  logs("sorted array " + arr.join(", "));
+  logs(`Elements count: ${arr.length}. Iterations: ${iterations}`);
 };

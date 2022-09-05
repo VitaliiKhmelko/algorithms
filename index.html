@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="./js/logs.js"></script>
     <script src="./js-algorithms/selection.js"></script>
     <script src="./js-algorithms/bubble.js"></script>
     <script src="./js-algorithms/bubble-optimized.js"></script>
   </head>
   <body>
-    <script>
-      selectionSorting();
+    <button onClick="selectionSorting()">Selection</button>
+    <button onClick="bubbleSorting()">Bubble</button>
+    <button onClick="bubbleOptimizedSorting()">Optimized Bubble</button>
 
-      // bubbleSorting();
-
-      // bubbleOptimizedSorting();
-
-    </script>
+    <div id="logs"></div>
   </body>
 </html>
